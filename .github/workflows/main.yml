@@ -6,9 +6,11 @@ branches:
 
 jobs:
   build:
-  - name: Checkout
-    run: actions/checkout@v4
+    runs-on: ubuntu-latest
   
-  steps:
-    - name: open hello.txt file
-      run: cat hello.txt
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: open hello.txt file
+        run: cat hello.txt
