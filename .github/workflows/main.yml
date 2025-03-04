@@ -1,0 +1,14 @@
+name: first CI workflow
+on: push
+
+branches:
+  - main
+
+jobs:
+  build:
+  - name: Checkout
+    run: actions/checkout@v4
+  
+  steps:
+    - name: open hello.txt file
+      run: cat hello.txt
